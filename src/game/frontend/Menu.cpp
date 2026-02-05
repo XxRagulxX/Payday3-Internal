@@ -1,6 +1,11 @@
 #include "Menu.hpp"
 #include "core/logging/Logging.hpp"
 
+// External declaration for unload flag
+namespace Globals {
+    extern std::atomic<bool> g_bUnloadRequested;
+}
+
 namespace Menu
 {
     bool g_bClientMove = false;
@@ -138,6 +143,39 @@ namespace Menu
         ImGui::Separator();
         ImGui::Checkbox("Show Call Traces", &g_bShowCallTraces);
 #endif
+
+        ImGui::Separator();
+        
+        // Unload button
+        ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.8f, 0.2f, 0.2f, 1.0f));
+        ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(1.0f, 0.3f, 0.3f, 1.0f));
+        ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.6f, 0.1f, 0.1f, 1.0f));
+        
+        if (ImGui::Button("Unload Cheat", ImVec2(-1, 0)))
+        {
+            ImGui::OpenPopup("Confirm Unload");
+        }
+        
+        ImGui::PopStyleColor(3);
+        
+        // Unload confirmation popup
+        if (ImGui::BeginPopupModal("Confirm Unload", nullptr, ImGuiWindowFlags_AlwaysAutoResize))
+        {
+            ImGui::Text("Are you sure you want to unload the cheat?");
+            ImGui::Separator();
+
+            if (ImGui::Button("Yes", ImVec2(120, 0))) {
+                Globals::g_bUnloadRequested = true;
+                ImGui::CloseCurrentPopup();
+            }
+
+            ImGui::SameLine();
+
+            if (ImGui::Button("No", ImVec2(120, 0)))
+                ImGui::CloseCurrentPopup();
+
+            ImGui::EndPopup();
+        }
 
         ImGui::End();
 

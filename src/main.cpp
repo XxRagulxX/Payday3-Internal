@@ -6,6 +6,7 @@
 #include <string>
 #include <utility>
 #include <stacktrace>
+#include <atomic>
 #include <MinHook.h>
 #pragma comment(lib, "version.lib")
 
@@ -26,9 +27,11 @@ namespace Globals {
 	static HMODULE g_hModule;
 	static HMODULE g_hBaseModule;
 	std::unique_ptr<Console> g_upConsole;
+	std::atomic<bool> g_bUnloadRequested{ false };  // Removed 'static' for external linkage
 }
 
 static std::chrono::milliseconds g_durationPing{ 100 };
+static std::chrono::steady_clock::time_point g_lastFrameTime = std::chrono::steady_clock::now();
 
 bool Init() 
 {
@@ -142,12 +145,12 @@ void UObjectProcessEvent_hk(const SDK::UObject* pObject, class SDK::UFunction* p
 		Menu::g_mapCallTraces.try_emplace(iNameHash, std::move(entry));
 	}
 		
-	static auto nameBlueprintUpdateCamera = SDK::UKismetStringLibrary::Conv_StringToName(L"BlueprintUpdateCamera");
-	static auto nameServerUpdateCamera = SDK::UKismetStringLibrary::Conv_StringToName(L"ServerUpdateCamera");
-	static auto nameReceiveTick = SDK::UKismetStringLibrary::Conv_StringToName(L"ReceiveTick");
-	static auto nameServerMovePacked = SDK::UKismetStringLibrary::Conv_StringToName(L"ServerMovePacked");
-	static auto nameGA_Fire_C = SDK::UKismetStringLibrary::Conv_StringToName(L"GA_Fire_C");
-	static auto nameK2_CommitExecute = SDK::UKismetStringLibrary::Conv_StringToName(L"K2_CommitExecute");
+	static const auto nameBlueprintUpdateCamera = SDK::UKismetStringLibrary::Conv_StringToName(L"BlueprintUpdateCamera");
+	static const auto nameServerUpdateCamera = SDK::UKismetStringLibrary::Conv_StringToName(L"ServerUpdateCamera");
+	static const auto nameReceiveTick = SDK::UKismetStringLibrary::Conv_StringToName(L"ReceiveTick");
+	static const auto nameServerMovePacked = SDK::UKismetStringLibrary::Conv_StringToName(L"ServerMovePacked");
+	static const auto nameGA_Fire_C = SDK::UKismetStringLibrary::Conv_StringToName(L"GA_Fire_C");
+	static const auto nameK2_CommitExecute = SDK::UKismetStringLibrary::Conv_StringToName(L"K2_CommitExecute");
 
 	if (pFunction->Name == nameBlueprintUpdateCamera){
 		auto& params = *reinterpret_cast<SDK::Params::PlayerCameraManager_BlueprintUpdateCamera*>(pParams);
@@ -161,7 +164,9 @@ void UObjectProcessEvent_hk(const SDK::UObject* pObject, class SDK::UFunction* p
 		return;
 	}
 
-	if (sFnName.find("ClientPlayForceFeedback_Internal") != std::string::npos) {
+	// Cache function name only when needed
+	static const std::string strForceFeedback = "ClientPlayForceFeedback_Internal";
+	if (pFunction->GetName().find(strForceFeedback) != std::string::npos) {
 		return;
 	}
 
@@ -237,7 +242,8 @@ void UObjectProcessEvent_hk(const SDK::UObject* pObject, class SDK::UFunction* p
 
 	if(pObject->IsA(SDK::ACH_PlayerBase_C::StaticClass()) || pObject->IsA(SDK::APlayerController::StaticClass()) || pObject->IsA(SDK::APlayerCameraManager::StaticClass()) || pObject->IsA(SDK::UCharacterMovementComponent::StaticClass()))
 	{
-		if(sFnName.find("ServerMovePacked") != std::string::npos){
+		static const std::string strServerMovePacked = "ServerMovePacked";
+		if(pFunction->GetName().find(strServerMovePacked) != std::string::npos){
 			if(!Menu::g_bClientMove) 
 				UObjectProcessEvent_o(pObject, pFunction, pParams);
 
@@ -264,7 +270,7 @@ void UObjectProcessEvent_hk(const SDK::UObject* pObject, class SDK::UFunction* p
 
 void MainLoop()
 {	
-	while (!GetAsyncKeyState(UNLOAD_KEY) && !GetAsyncKeyState(UNLOAD_KEY_ALT))
+	while (!GetAsyncKeyState(UNLOAD_KEY) && !GetAsyncKeyState(UNLOAD_KEY_ALT) && !Globals::g_bUnloadRequested)
     {
 		if (GetAsyncKeyState(CONSOLE_KEY) & 0x1)
 			Globals::g_upConsole->ToggleVisibility();
@@ -321,12 +327,6 @@ void MainLoop()
 		
 		pLocalPlayerPawn->CarryTiltDegrees = 0.0f;
 		pLocalPlayerPawn->CarryTiltSpeed = 10000.0f;
-		//pLocalPlayerPawn->CarryAdditionalTiltDegrees = 0.0f;
-
-		//pLocalPlayerPawn->K2_SetActorLocation(pLocalPlayerPawn->K2_GetActorLocation() + (SDK::UKismetMathLibrary::GetForwardVector(pLocalPlayerPawn->K2_GetActorRotation()).GetNormalized() * 100.0f), false, nullptr, true);
-		//pLocalPlayerPawn->Client_Teleport(, 0.f);
-
-		std::this_thread::sleep_for(std::chrono::milliseconds(10));
 	}
 }
 
