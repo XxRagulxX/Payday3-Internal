@@ -17,103 +17,61 @@
 namespace SDK
 {
 
-// Function WBP_SafeCrackMinigame.WBP_SafeCrackMinigame_C.SetNewTimerSpeed
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function WBP_SafeCrackMinigame.WBP_SafeCrackMinigame_C.ExecuteUbergraph_WBP_SafeCrackMinigame
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// float                                   LoopTime_0                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_SafeCrackMinigame_C::SetNewTimerSpeed(float LoopTime_0)
+void UWBP_SafeCrackMinigame_C::ExecuteUbergraph_WBP_SafeCrackMinigame(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SafeCrackMinigame_C", "SetNewTimerSpeed");
+		Func = Class->GetFunction("WBP_SafeCrackMinigame_C", "ExecuteUbergraph_WBP_SafeCrackMinigame");
 
-	Params::WBP_SafeCrackMinigame_C_SetNewTimerSpeed Parms{};
+	Params::WBP_SafeCrackMinigame_C_ExecuteUbergraph_WBP_SafeCrackMinigame Parms{};
 
-	Parms.LoopTime_0 = LoopTime_0;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_SafeCrackMinigame.WBP_SafeCrackMinigame_C.IncreasingRounds
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_SafeCrackMinigame.WBP_SafeCrackMinigame_C.MiniGameStateChanged
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// bool                                    decrease                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// EPD3MiniGameState                       NewState                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_SafeCrackMinigame_C::IncreasingRounds(bool decrease)
+void UWBP_SafeCrackMinigame_C::MiniGameStateChanged(EPD3MiniGameState NewState)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SafeCrackMinigame_C", "IncreasingRounds");
+		Func = Class->GetFunction("WBP_SafeCrackMinigame_C", "MiniGameStateChanged");
 
-	Params::WBP_SafeCrackMinigame_C_IncreasingRounds Parms{};
+	Params::WBP_SafeCrackMinigame_C_MiniGameStateChanged Parms{};
 
-	Parms.decrease = decrease;
+	Parms.NewState = NewState;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_SafeCrackMinigame.WBP_SafeCrackMinigame_C.SetCorrectNumber
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_SafeCrackMinigame_C::SetCorrectNumber()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SafeCrackMinigame_C", "SetCorrectNumber");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_SafeCrackMinigame.WBP_SafeCrackMinigame_C.Finished_6CE8C22141CE58724C9E5F81C78317AF
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_SafeCrackMinigame_C::Finished_6CE8C22141CE58724C9E5F81C78317AF()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SafeCrackMinigame_C", "Finished_6CE8C22141CE58724C9E5F81C78317AF");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_SafeCrackMinigame.WBP_SafeCrackMinigame_C.OnInitialized
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWBP_SafeCrackMinigame_C::OnInitialized()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SafeCrackMinigame_C", "OnInitialized");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_SafeCrackMinigame.WBP_SafeCrackMinigame_C.BP_OnXAxisChanged
-// (Event, Protected, BlueprintEvent)
+// Function WBP_SafeCrackMinigame.WBP_SafeCrackMinigame_C.OnOwningMiniGameComponent
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// float                                   Value_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class USBZMiniGameComponent*            MiniGameComponet                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_SafeCrackMinigame_C::BP_OnXAxisChanged(float Value_0)
+void UWBP_SafeCrackMinigame_C::OnOwningMiniGameComponent(class USBZMiniGameComponent* MiniGameComponet)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SafeCrackMinigame_C", "BP_OnXAxisChanged");
+		Func = Class->GetFunction("WBP_SafeCrackMinigame_C", "OnOwningMiniGameComponent");
 
-	Params::WBP_SafeCrackMinigame_C_BP_OnXAxisChanged Parms{};
+	Params::WBP_SafeCrackMinigame_C_OnOwningMiniGameComponent Parms{};
 
-	Parms.Value_0 = Value_0;
+	Parms.MiniGameComponet = MiniGameComponet;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -141,61 +99,103 @@ void UWBP_SafeCrackMinigame_C::Tick(const struct FGeometry& MyGeometry, float In
 }
 
 
-// Function WBP_SafeCrackMinigame.WBP_SafeCrackMinigame_C.OnOwningMiniGameComponent
-// (Event, Public, BlueprintEvent)
+// Function WBP_SafeCrackMinigame.WBP_SafeCrackMinigame_C.BP_OnXAxisChanged
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// class USBZMiniGameComponent*            MiniGameComponet                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Value_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_SafeCrackMinigame_C::OnOwningMiniGameComponent(class USBZMiniGameComponent* MiniGameComponet)
+void UWBP_SafeCrackMinigame_C::BP_OnXAxisChanged(float Value_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SafeCrackMinigame_C", "OnOwningMiniGameComponent");
+		Func = Class->GetFunction("WBP_SafeCrackMinigame_C", "BP_OnXAxisChanged");
 
-	Params::WBP_SafeCrackMinigame_C_OnOwningMiniGameComponent Parms{};
+	Params::WBP_SafeCrackMinigame_C_BP_OnXAxisChanged Parms{};
 
-	Parms.MiniGameComponet = MiniGameComponet;
+	Parms.Value_0 = Value_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_SafeCrackMinigame.WBP_SafeCrackMinigame_C.MiniGameStateChanged
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// EPD3MiniGameState                       NewState                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_SafeCrackMinigame.WBP_SafeCrackMinigame_C.OnInitialized
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWBP_SafeCrackMinigame_C::MiniGameStateChanged(EPD3MiniGameState NewState)
+void UWBP_SafeCrackMinigame_C::OnInitialized()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SafeCrackMinigame_C", "MiniGameStateChanged");
+		Func = Class->GetFunction("WBP_SafeCrackMinigame_C", "OnInitialized");
 
-	Params::WBP_SafeCrackMinigame_C_MiniGameStateChanged Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.NewState = NewState;
+
+// Function WBP_SafeCrackMinigame.WBP_SafeCrackMinigame_C.Finished_6CE8C22141CE58724C9E5F81C78317AF
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_SafeCrackMinigame_C::Finished_6CE8C22141CE58724C9E5F81C78317AF()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SafeCrackMinigame_C", "Finished_6CE8C22141CE58724C9E5F81C78317AF");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_SafeCrackMinigame.WBP_SafeCrackMinigame_C.SetCorrectNumber
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_SafeCrackMinigame_C::SetCorrectNumber()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SafeCrackMinigame_C", "SetCorrectNumber");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_SafeCrackMinigame.WBP_SafeCrackMinigame_C.IncreasingRounds
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    decrease                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UWBP_SafeCrackMinigame_C::IncreasingRounds(bool decrease)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SafeCrackMinigame_C", "IncreasingRounds");
+
+	Params::WBP_SafeCrackMinigame_C_IncreasingRounds Parms{};
+
+	Parms.decrease = decrease;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_SafeCrackMinigame.WBP_SafeCrackMinigame_C.ExecuteUbergraph_WBP_SafeCrackMinigame
-// (Final, UbergraphFunction, HasDefaults)
+// Function WBP_SafeCrackMinigame.WBP_SafeCrackMinigame_C.SetNewTimerSpeed
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   LoopTime_0                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_SafeCrackMinigame_C::ExecuteUbergraph_WBP_SafeCrackMinigame(int32 EntryPoint)
+void UWBP_SafeCrackMinigame_C::SetNewTimerSpeed(float LoopTime_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SafeCrackMinigame_C", "ExecuteUbergraph_WBP_SafeCrackMinigame");
+		Func = Class->GetFunction("WBP_SafeCrackMinigame_C", "SetNewTimerSpeed");
 
-	Params::WBP_SafeCrackMinigame_C_ExecuteUbergraph_WBP_SafeCrackMinigame Parms{};
+	Params::WBP_SafeCrackMinigame_C_SetNewTimerSpeed Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.LoopTime_0 = LoopTime_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

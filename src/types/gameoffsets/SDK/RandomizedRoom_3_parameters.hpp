@@ -10,19 +10,33 @@
 
 #include "Basic.hpp"
 
+#include "Starbreeze_structs.hpp"
+
 
 namespace SDK::Params
 {
 
-// Function RandomizedRoom_3.R_Penthouse_Office_C.ExecuteUbergraph_R_Penthouse_Office
+// Function RandomizedRoom_3.R_BranchBank_ToiletRoom_C.HeistStateChanged
+// 0x0002 (0x0002 - 0x0000)
+struct R_BranchBank_ToiletRoom_C_HeistStateChanged final
+{
+public:
+	EPD3HeistState                                OldHeistState;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPD3HeistState                                CurrentHeistState;                                 // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_R_BranchBank_ToiletRoom_C_HeistStateChanged;
+
+// Function RandomizedRoom_3.R_BranchBank_ToiletRoom_C.ExecuteUbergraph_R_BranchBank_ToiletRoom
 // 0x0008 (0x0008 - 0x0000)
-struct R_Penthouse_Office_C_ExecuteUbergraph_R_Penthouse_Office final
+struct R_BranchBank_ToiletRoom_C_ExecuteUbergraph_R_BranchBank_ToiletRoom final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_RemoteEvent_ReturnValue;                  // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	EPD3HeistState                                K2Node_Event_OldHeistState;                        // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPD3HeistState                                K2Node_Event_CurrentHeistState;                    // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-DUMPER7_ASSERTS_R_Penthouse_Office_C_ExecuteUbergraph_R_Penthouse_Office;
+DUMPER7_ASSERTS_R_BranchBank_ToiletRoom_C_ExecuteUbergraph_R_BranchBank_ToiletRoom;
 
 }
 

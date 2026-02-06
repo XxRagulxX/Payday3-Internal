@@ -28,9 +28,9 @@ public:
 	bool                                          bIsLongCanister_;                                  // 0x04B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
-	void UserConstructionScript();
-	void BndEvt__BP_TestExplosiveFuelTank_NiagaraComponent_K2Node_ComponentBoundEvent_0_ActorComponentActivatedSignature__DelegateSignature(class UActorComponent* Component, bool bReset);
 	void ExecuteUbergraph_BP_PropaneCanister_01_A(int32 EntryPoint);
+	void BndEvt__BP_TestExplosiveFuelTank_NiagaraComponent_K2Node_ComponentBoundEvent_0_ActorComponentActivatedSignature__DelegateSignature(class UActorComponent* Component, bool bReset);
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

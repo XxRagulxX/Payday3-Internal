@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function BP_SentryGun.BP_SentryGun_C.ExecuteUbergraph_BP_SentryGun
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_SentryGun_C::ExecuteUbergraph_BP_SentryGun(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SentryGun_C", "ExecuteUbergraph_BP_SentryGun");
-
-	Params::BP_SentryGun_C_ExecuteUbergraph_BP_SentryGun Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_SentryGun.BP_SentryGun_C.OnOverheatDamageTaken
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -52,6 +32,26 @@ void ABP_SentryGun_C::OnOverheatDamageTaken(float InHealth)
 	Params::BP_SentryGun_C_OnOverheatDamageTaken Parms{};
 
 	Parms.InHealth = InHealth;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_SentryGun.BP_SentryGun_C.ExecuteUbergraph_BP_SentryGun
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_SentryGun_C::ExecuteUbergraph_BP_SentryGun(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SentryGun_C", "ExecuteUbergraph_BP_SentryGun");
+
+	Params::BP_SentryGun_C_ExecuteUbergraph_BP_SentryGun Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

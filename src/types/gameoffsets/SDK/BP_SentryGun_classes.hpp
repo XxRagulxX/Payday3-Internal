@@ -28,8 +28,8 @@ public:
 	class USceneComponent*                        WeaponAttach;                                      // 0x0828(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BP_SentryGun(int32 EntryPoint);
 	void OnOverheatDamageTaken(float InHealth);
+	void ExecuteUbergraph_BP_SentryGun(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

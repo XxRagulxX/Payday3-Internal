@@ -16,44 +16,45 @@
 namespace SDK::Params
 {
 
-// Function RandomizedRoom_0.R_Penthouse_Vault_C.BndEvt__R_Penthouse_Vault_BP_PortableSSD_2_K2Node_ActorBoundEvent_1_SBZActorOnInteraction__DelegateSignature
+// Function RandomizedRoom_0.R_BranchBank_PowerRoom_C.BndEvt__R_BranchBank_PowerRoom_SBZPlayerTriggerVolume_1_K2Node_ActorBoundEvent_3_ActorBeginOverlapSignature__DelegateSignature
 // 0x0010 (0x0010 - 0x0000)
-struct R_Penthouse_Vault_C_BndEvt__R_Penthouse_Vault_BP_PortableSSD_2_K2Node_ActorBoundEvent_1_SBZActorOnInteraction__DelegateSignature final
+struct R_BranchBank_PowerRoom_C_BndEvt__R_BranchBank_PowerRoom_SBZPlayerTriggerVolume_1_K2Node_ActorBoundEvent_3_ActorBeginOverlapSignature__DelegateSignature final
 {
 public:
-	class ASBZInteractionActor*                   Interactable;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USBZInteractorComponent*                Interactor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 OverlappedActor;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_R_Penthouse_Vault_C_BndEvt__R_Penthouse_Vault_BP_PortableSSD_2_K2Node_ActorBoundEvent_1_SBZActorOnInteraction__DelegateSignature;
+DUMPER7_ASSERTS_R_BranchBank_PowerRoom_C_BndEvt__R_BranchBank_PowerRoom_SBZPlayerTriggerVolume_1_K2Node_ActorBoundEvent_3_ActorBeginOverlapSignature__DelegateSignature;
 
-// Function RandomizedRoom_0.R_Penthouse_Vault_C.BndEvt__R_Penthouse_Vault_BP_Int_Door_01_SmallVault_01_0_K2Node_ActorBoundEvent_2_SBZGateStateChangedDelegate__DelegateSignature
+// Function RandomizedRoom_0.R_BranchBank_PowerRoom_C.HeistStateChanged
 // 0x0002 (0x0002 - 0x0000)
-struct R_Penthouse_Vault_C_BndEvt__R_Penthouse_Vault_BP_Int_Door_01_SmallVault_01_0_K2Node_ActorBoundEvent_2_SBZGateStateChangedDelegate__DelegateSignature final
+struct R_BranchBank_PowerRoom_C_HeistStateChanged final
 {
 public:
-	ESBZGateState                                 OldState;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESBZGateState                                 State;                                             // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPD3HeistState                                OldHeistState;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPD3HeistState                                CurrentHeistState;                                 // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_R_Penthouse_Vault_C_BndEvt__R_Penthouse_Vault_BP_Int_Door_01_SmallVault_01_0_K2Node_ActorBoundEvent_2_SBZGateStateChangedDelegate__DelegateSignature;
+DUMPER7_ASSERTS_R_BranchBank_PowerRoom_C_HeistStateChanged;
 
-// Function RandomizedRoom_0.R_Penthouse_Vault_C.ExecuteUbergraph_R_Penthouse_Vault
-// 0x0020 (0x0020 - 0x0000)
-struct R_Penthouse_Vault_C_ExecuteUbergraph_R_Penthouse_Vault final
+// Function RandomizedRoom_0.R_BranchBank_PowerRoom_C.ExecuteUbergraph_R_BranchBank_PowerRoom
+// 0x0030 (0x0030 - 0x0000)
+struct R_BranchBank_PowerRoom_C_ExecuteUbergraph_R_BranchBank_PowerRoom final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_RemoteEvent_ReturnValue;                  // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class ASBZInteractionActor*                   K2Node_ActorBoundEvent_Interactable;               // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USBZInteractorComponent*                K2Node_ActorBoundEvent_Interactor;                 // 0x0010(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_RemoteEvent_ReturnValue_1;                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_SetState_ReturnValue;                     // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_RemoteEvent_ReturnValue_2;                // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESBZGateState                                 K2Node_ActorBoundEvent_OldState;                   // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESBZGateState                                 K2Node_ActorBoundEvent_State;                      // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	class ASBZPlayerCharacter*                    CallFunc_GetClosestPlayerToActor_PlayerCharacter;  // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetClosestPlayerToActor_Distance;         // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 K2Node_ActorBoundEvent_OverlappedActor;            // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_ActorBoundEvent_OtherActor;                 // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_RemoteEvent_ReturnValue_1;                // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	EPD3HeistState                                K2Node_Event_OldHeistState;                        // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPD3HeistState                                K2Node_Event_CurrentHeistState;                    // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x002B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-DUMPER7_ASSERTS_R_Penthouse_Vault_C_ExecuteUbergraph_R_Penthouse_Vault;
+DUMPER7_ASSERTS_R_BranchBank_PowerRoom_C_ExecuteUbergraph_R_BranchBank_PowerRoom;
 
 }
 

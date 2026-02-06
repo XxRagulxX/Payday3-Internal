@@ -39,14 +39,14 @@ public:
 	TMulticastInlineDelegate<void()>              OnTurnOff;                                         // 0x0348(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void SetInteractionEnable(bool State);
-	void UserConstructionScript();
-	void OnStateChanged(bool bStateToChangeTo, bool bDoCosmetics);
-	void BndEvt__BP_ElevatorDoor_ControlPanel_InteractableDoor_K2Node_ComponentBoundEvent_0_SBZOnInteraction__DelegateSignature(class USBZBaseInteractableComponent* Interactable, class USBZInteractorComponent* Interactor, bool bIsLocallyControlledInteractor);
-	void BndEvt__BP_ElevatorDoor_ControlPanel_InteractablePowerBox_K2Node_ComponentBoundEvent_2_SBZOnInteraction__DelegateSignature(class USBZBaseInteractableComponent* Interactable, class USBZInteractorComponent* Interactor, bool bIsLocallyControlledInteractor);
-	void On_Ack_Complete_Sound();
-	void DoorOpened();
 	void ExecuteUbergraph_BP_BollardControll(int32 EntryPoint);
+	void DoorOpened();
+	void On_Ack_Complete_Sound();
+	void BndEvt__BP_ElevatorDoor_ControlPanel_InteractablePowerBox_K2Node_ComponentBoundEvent_2_SBZOnInteraction__DelegateSignature(class USBZBaseInteractableComponent* Interactable, class USBZInteractorComponent* Interactor, bool bIsLocallyControlledInteractor);
+	void BndEvt__BP_ElevatorDoor_ControlPanel_InteractableDoor_K2Node_ComponentBoundEvent_0_SBZOnInteraction__DelegateSignature(class USBZBaseInteractableComponent* Interactable, class USBZInteractorComponent* Interactor, bool bIsLocallyControlledInteractor);
+	void OnStateChanged(bool bStateToChangeTo, bool bDoCosmetics);
+	void UserConstructionScript();
+	void SetInteractionEnable(bool State);
 
 public:
 	static class UClass* StaticClass()

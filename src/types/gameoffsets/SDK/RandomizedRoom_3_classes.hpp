@@ -11,40 +11,49 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "Starbreeze_structs.hpp"
 #include "Starbreeze_classes.hpp"
 
 
 namespace SDK
 {
 
-// BlueprintGeneratedClass RandomizedRoom_3.R_Penthouse_Office_C
-// 0x0008 (0x0348 - 0x0340)
-class AR_Penthouse_Office_C final : public ASBZLevelScriptActor
+// BlueprintGeneratedClass RandomizedRoom_3.R_BranchBank_ToiletRoom_C
+// 0x0018 (0x0358 - 0x0340)
+class AR_BranchBank_ToiletRoom_C final : public ASBZLevelScriptActor
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          Var_OpenedDoor;                                    // 0x0348(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          Var_CanistersRequired;                             // 0x0349(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_34A[0x2];                                      // 0x034A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Int_InteractedWithAllCanisters;                    // 0x034C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          VarCanistersEnabled;                               // 0x0350(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	void ReceiveBeginPlay();
-	void BndEvt__R_Penthouse_Office_SBZSpawnLocationHandler1_K2Node_ActorBoundEvent_3_SBZSpawnLocationHandlerDelegate__DelegateSignature();
-	void OnRandomSublevelPlaced();
-	void ExecuteUbergraph_R_Penthouse_Office(int32 EntryPoint);
+	void OnRandomPlacementStarted();
+	void HeistStateChanged(EPD3HeistState OldHeistState, EPD3HeistState CurrentHeistState);
+	void BranchBank_Roof();
+	void BranchBank_Stairs();
+	void BranchBank_Kitchen();
+	void RandomizedRoomTest_RemoteEvent1();
+	void ExecuteUbergraph_R_BranchBank_ToiletRoom(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
 	{
-		BP_STATIC_CLASS_IMPL("R_Penthouse_Office_C")
+		BP_STATIC_CLASS_IMPL("R_BranchBank_ToiletRoom_C")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"R_Penthouse_Office_C")
+		STATIC_NAME_IMPL(L"R_BranchBank_ToiletRoom_C")
 	}
-	static class AR_Penthouse_Office_C* GetDefaultObj()
+	static class AR_BranchBank_ToiletRoom_C* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<AR_Penthouse_Office_C>();
+		return GetDefaultObjImpl<AR_BranchBank_ToiletRoom_C>();
 	}
 };
-DUMPER7_ASSERTS_AR_Penthouse_Office_C;
+DUMPER7_ASSERTS_AR_BranchBank_ToiletRoom_C;
 
 }
 

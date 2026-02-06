@@ -64,25 +64,25 @@ public:
 	int32                                         Roughness_Index;                                   // 0x038C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void TintMesh(class UStaticMeshComponent*& Mesh_Component, struct FLinearColor& Color);
-	void Add_Debug_Stats(bool Debug_Enabled, class USplineComponent*& Spline_0, float Start_Distance, float End_Distance, float Mesh_Lenght, const class FString& Mesh_Type, const class FString& Mesh_Name, const struct FLinearColor& Text_Color, int32 Mesh_Number);
-	void Update_Atachment(class AActor*& Actor, int32 Spline_Point_Index);
-	void Get_Color(TArray<struct FLinearColor>& Color_Array, int32 Index_0, struct FLinearColor* Color);
-	void Set_Debug_Color(class USplineMeshComponent* Mesh, bool Debug_Enabled, const struct FLinearColor& Linear_Color);
-	void Add_Instanced_Mesh__to_Spline(class USplineComponent*& Spline_0, class UStaticMesh*& Mesh, float Distance, float Offset, bool Reverse, float Scale, const struct FRotator& Rotation, class UStaticMeshComponent** Mesh_Component);
-	void Add_Deformable_Mesh_To_Spline(ESplineMeshAxis& Forward_Axis, class UStaticMesh*& Mesh, class USplineComponent*& Spline_0, float Mesh_Scale_0, float& Start_Distance, float Start_Offset, float& End_Distance, bool Clamp_Tangent, float Clamp_Tangent_Size, bool is_Debug_Enabled_0, const struct FLinearColor& Debug_Color, class USplineMeshComponent** Mesh_Component);
-	void Get_Maximum_Lenght(TArray<struct FLengthMeshArray>& Struct_Array, float* Max_Length);
-	void Select_Struct_Array(struct FVector& Direction_Vector, TArray<struct FLengthMeshArray>* Struct_Array, ESplineMeshAxis* ForwardAxis, class FString* Mesh_Type);
-	void Test_Alignment_Factor(struct FVector& Test_Vector, float Alignment_Factor_Threshold_0, bool* Result);
-	void Make_Sorted_Srtruct_Array(TArray<class UStaticMesh*>& Spline_Meshes, ESplineMeshAxis& Forward_Axis, TArray<struct FLengthMeshArray>* Sctruct_Array);
-	void Sort_by_Length(TArray<class UStaticMesh*>& Mesh_Array, ESplineMeshAxis& Forward_Axis);
-	void Get_Random_Mesh_by_Index(int32 Index_0, TArray<struct FLengthMeshArray>& Mesh_Array, bool Alternation_Mode, int32 Counter, class UStaticMesh** Mesh, float* Length);
-	void Get_Random_Mesh_by_Length(float Length, float Mesh_Scale_Multiplier, TArray<struct FLengthMeshArray>& Mesh_Array, bool Alternation_Mode, int32 Counter, class UStaticMesh** Mesh, float* Mesh_Length);
-	void Get_Mesh_Array_by_Length(TArray<class UStaticMesh*>& Mesh_Array, ESplineMeshAxis Forward_Axis, float Length, TArray<class UStaticMesh*>* Meshes);
-	void UserConstructionScript();
-	void Add_Chain_Actor();
-	void Add_Start_Actor();
 	void ExecuteUbergraph_BP_SimpleSpline_02(int32 EntryPoint);
+	void Add_Start_Actor();
+	void Add_Chain_Actor();
+	void UserConstructionScript();
+	void Get_Mesh_Array_by_Length(TArray<class UStaticMesh*>& Mesh_Array, ESplineMeshAxis Forward_Axis, float Length, TArray<class UStaticMesh*>* Meshes);
+	void Get_Random_Mesh_by_Length(float Length, float Mesh_Scale_Multiplier, TArray<struct FLengthMeshArray>& Mesh_Array, bool Alternation_Mode, int32 Counter, class UStaticMesh** Mesh, float* Mesh_Length);
+	void Get_Random_Mesh_by_Index(int32 Index_0, TArray<struct FLengthMeshArray>& Mesh_Array, bool Alternation_Mode, int32 Counter, class UStaticMesh** Mesh, float* Length);
+	void Sort_by_Length(TArray<class UStaticMesh*>& Mesh_Array, ESplineMeshAxis& Forward_Axis);
+	void Make_Sorted_Srtruct_Array(TArray<class UStaticMesh*>& Spline_Meshes, ESplineMeshAxis& Forward_Axis, TArray<struct FLengthMeshArray>* Sctruct_Array);
+	void Test_Alignment_Factor(struct FVector& Test_Vector, float Alignment_Factor_Threshold_0, bool* Result);
+	void Select_Struct_Array(struct FVector& Direction_Vector, TArray<struct FLengthMeshArray>* Struct_Array, ESplineMeshAxis* ForwardAxis, class FString* Mesh_Type);
+	void Get_Maximum_Lenght(TArray<struct FLengthMeshArray>& Struct_Array, float* Max_Length);
+	void Add_Deformable_Mesh_To_Spline(ESplineMeshAxis& Forward_Axis, class UStaticMesh*& Mesh, class USplineComponent*& Spline_0, float Mesh_Scale_0, float& Start_Distance, float Start_Offset, float& End_Distance, bool Clamp_Tangent, float Clamp_Tangent_Size, bool is_Debug_Enabled_0, const struct FLinearColor& Debug_Color, class USplineMeshComponent** Mesh_Component);
+	void Add_Instanced_Mesh__to_Spline(class USplineComponent*& Spline_0, class UStaticMesh*& Mesh, float Distance, float Offset, bool Reverse, float Scale, const struct FRotator& Rotation, class UStaticMeshComponent** Mesh_Component);
+	void Set_Debug_Color(class USplineMeshComponent* Mesh, bool Debug_Enabled, const struct FLinearColor& Linear_Color);
+	void Get_Color(TArray<struct FLinearColor>& Color_Array, int32 Index_0, struct FLinearColor* Color);
+	void Update_Atachment(class AActor*& Actor, int32 Spline_Point_Index);
+	void Add_Debug_Stats(bool Debug_Enabled, class USplineComponent*& Spline_0, float Start_Distance, float End_Distance, float Mesh_Lenght, const class FString& Mesh_Type, const class FString& Mesh_Name, const struct FLinearColor& Text_Color, int32 Mesh_Number);
+	void TintMesh(class UStaticMeshComponent*& Mesh_Component, struct FLinearColor& Color);
 
 public:
 	static class UClass* StaticClass()

@@ -17,17 +17,23 @@
 namespace SDK
 {
 
-// Function BP_PropaneCanister_01_A.BP_PropaneCanister_01_A_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function BP_PropaneCanister_01_A.BP_PropaneCanister_01_A_C.ExecuteUbergraph_BP_PropaneCanister_01_A
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_PropaneCanister_01_A_C::UserConstructionScript()
+void ABP_PropaneCanister_01_A_C::ExecuteUbergraph_BP_PropaneCanister_01_A(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PropaneCanister_01_A_C", "UserConstructionScript");
+		Func = Class->GetFunction("BP_PropaneCanister_01_A_C", "ExecuteUbergraph_BP_PropaneCanister_01_A");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_PropaneCanister_01_A_C_ExecuteUbergraph_BP_PropaneCanister_01_A Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -53,23 +59,17 @@ void ABP_PropaneCanister_01_A_C::BndEvt__BP_TestExplosiveFuelTank_NiagaraCompone
 }
 
 
-// Function BP_PropaneCanister_01_A.BP_PropaneCanister_01_A_C.ExecuteUbergraph_BP_PropaneCanister_01_A
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_PropaneCanister_01_A.BP_PropaneCanister_01_A_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_PropaneCanister_01_A_C::ExecuteUbergraph_BP_PropaneCanister_01_A(int32 EntryPoint)
+void ABP_PropaneCanister_01_A_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PropaneCanister_01_A_C", "ExecuteUbergraph_BP_PropaneCanister_01_A");
+		Func = Class->GetFunction("BP_PropaneCanister_01_A_C", "UserConstructionScript");
 
-	Params::BP_PropaneCanister_01_A_C_ExecuteUbergraph_BP_PropaneCanister_01_A Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

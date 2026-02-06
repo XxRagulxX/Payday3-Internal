@@ -18,7 +18,7 @@ namespace SDK
 
 // BlueprintGeneratedClass BP_AmmoPack.BP_AmmoPack_C
 // 0x0010 (0x0560 - 0x0550)
-class ABP_AmmoPack_C : public ASBZAmmoPack
+class ABP_AmmoPack_C final : public ASBZAmmoPack
 {
 public:
 	class USBZShoutTargetComponent*               SBZShoutTarget;                                    // 0x0550(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)

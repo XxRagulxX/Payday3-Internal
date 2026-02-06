@@ -14,6 +14,15 @@
 namespace SDK::Params
 {
 
+// Function BP_SentryGun.BP_SentryGun_C.OnOverheatDamageTaken
+// 0x0004 (0x0004 - 0x0000)
+struct BP_SentryGun_C_OnOverheatDamageTaken final
+{
+public:
+	float                                         InHealth;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_SentryGun_C_OnOverheatDamageTaken;
+
 // Function BP_SentryGun.BP_SentryGun_C.ExecuteUbergraph_BP_SentryGun
 // 0x0010 (0x0010 - 0x0000)
 struct BP_SentryGun_C_ExecuteUbergraph_BP_SentryGun final
@@ -26,15 +35,6 @@ public:
 	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_BP_SentryGun_C_ExecuteUbergraph_BP_SentryGun;
-
-// Function BP_SentryGun.BP_SentryGun_C.OnOverheatDamageTaken
-// 0x0004 (0x0004 - 0x0000)
-struct BP_SentryGun_C_OnOverheatDamageTaken final
-{
-public:
-	float                                         InHealth;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_SentryGun_C_OnOverheatDamageTaken;
 
 }
 

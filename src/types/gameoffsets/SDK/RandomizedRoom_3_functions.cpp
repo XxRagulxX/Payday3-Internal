@@ -17,61 +17,111 @@
 namespace SDK
 {
 
-// Function RandomizedRoom_3.R_Penthouse_Office_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void AR_Penthouse_Office_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("R_Penthouse_Office_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function RandomizedRoom_3.R_Penthouse_Office_C.BndEvt__R_Penthouse_Office_SBZSpawnLocationHandler1_K2Node_ActorBoundEvent_3_SBZSpawnLocationHandlerDelegate__DelegateSignature
-// (BlueprintAuthorityOnly, BlueprintEvent)
-
-void AR_Penthouse_Office_C::BndEvt__R_Penthouse_Office_SBZSpawnLocationHandler1_K2Node_ActorBoundEvent_3_SBZSpawnLocationHandlerDelegate__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("R_Penthouse_Office_C", "BndEvt__R_Penthouse_Office_SBZSpawnLocationHandler1_K2Node_ActorBoundEvent_3_SBZSpawnLocationHandlerDelegate__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function RandomizedRoom_3.R_Penthouse_Office_C.OnRandomSublevelPlaced
+// Function RandomizedRoom_3.R_BranchBank_ToiletRoom_C.OnRandomPlacementStarted
 // (Event, Public, BlueprintEvent)
 
-void AR_Penthouse_Office_C::OnRandomSublevelPlaced()
+void AR_BranchBank_ToiletRoom_C::OnRandomPlacementStarted()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("R_Penthouse_Office_C", "OnRandomSublevelPlaced");
+		Func = Class->GetFunction("R_BranchBank_ToiletRoom_C", "OnRandomPlacementStarted");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function RandomizedRoom_3.R_Penthouse_Office_C.ExecuteUbergraph_R_Penthouse_Office
+// Function RandomizedRoom_3.R_BranchBank_ToiletRoom_C.HeistStateChanged
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// EPD3HeistState                          OldHeistState                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EPD3HeistState                          CurrentHeistState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AR_BranchBank_ToiletRoom_C::HeistStateChanged(EPD3HeistState OldHeistState, EPD3HeistState CurrentHeistState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("R_BranchBank_ToiletRoom_C", "HeistStateChanged");
+
+	Params::R_BranchBank_ToiletRoom_C_HeistStateChanged Parms{};
+
+	Parms.OldHeistState = OldHeistState;
+	Parms.CurrentHeistState = CurrentHeistState;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function RandomizedRoom_3.R_BranchBank_ToiletRoom_C.BranchBank_Roof
+// (BlueprintCallable, BlueprintEvent)
+
+void AR_BranchBank_ToiletRoom_C::BranchBank_Roof()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("R_BranchBank_ToiletRoom_C", "BranchBank_Roof");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function RandomizedRoom_3.R_BranchBank_ToiletRoom_C.BranchBank_Stairs
+// (BlueprintCallable, BlueprintEvent)
+
+void AR_BranchBank_ToiletRoom_C::BranchBank_Stairs()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("R_BranchBank_ToiletRoom_C", "BranchBank_Stairs");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function RandomizedRoom_3.R_BranchBank_ToiletRoom_C.BranchBank_Kitchen
+// (BlueprintCallable, BlueprintEvent)
+
+void AR_BranchBank_ToiletRoom_C::BranchBank_Kitchen()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("R_BranchBank_ToiletRoom_C", "BranchBank_Kitchen");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function RandomizedRoom_3.R_BranchBank_ToiletRoom_C.RandomizedRoomTest_RemoteEvent1
+// (BlueprintCallable, BlueprintEvent)
+
+void AR_BranchBank_ToiletRoom_C::RandomizedRoomTest_RemoteEvent1()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("R_BranchBank_ToiletRoom_C", "RandomizedRoomTest_RemoteEvent1");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function RandomizedRoom_3.R_BranchBank_ToiletRoom_C.ExecuteUbergraph_R_BranchBank_ToiletRoom
 // (Final, UbergraphFunction)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AR_Penthouse_Office_C::ExecuteUbergraph_R_Penthouse_Office(int32 EntryPoint)
+void AR_BranchBank_ToiletRoom_C::ExecuteUbergraph_R_BranchBank_ToiletRoom(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("R_Penthouse_Office_C", "ExecuteUbergraph_R_Penthouse_Office");
+		Func = Class->GetFunction("R_BranchBank_ToiletRoom_C", "ExecuteUbergraph_R_BranchBank_ToiletRoom");
 
-	Params::R_Penthouse_Office_C_ExecuteUbergraph_R_Penthouse_Office Parms{};
+	Params::R_BranchBank_ToiletRoom_C_ExecuteUbergraph_R_BranchBank_ToiletRoom Parms{};
 
 	Parms.EntryPoint = EntryPoint;
 

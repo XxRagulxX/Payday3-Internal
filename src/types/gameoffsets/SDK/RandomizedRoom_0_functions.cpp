@@ -17,105 +17,175 @@
 namespace SDK
 {
 
-// Function RandomizedRoom_0.R_Penthouse_Vault_C.BndEvt__R_Penthouse_Vault_BP_Safe_01_2_K2Node_ActorBoundEvent_0_SBZOnMinigameDoneDelegate__DelegateSignature
-// (BlueprintAuthorityOnly, BlueprintEvent)
-
-void AR_Penthouse_Vault_C::BndEvt__R_Penthouse_Vault_BP_Safe_01_2_K2Node_ActorBoundEvent_0_SBZOnMinigameDoneDelegate__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("R_Penthouse_Vault_C", "BndEvt__R_Penthouse_Vault_BP_Safe_01_2_K2Node_ActorBoundEvent_0_SBZOnMinigameDoneDelegate__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function RandomizedRoom_0.R_Penthouse_Vault_C.BndEvt__R_Penthouse_Vault_BP_PortableSSD_2_K2Node_ActorBoundEvent_1_SBZActorOnInteraction__DelegateSignature
+// Function RandomizedRoom_0.R_BranchBank_PowerRoom_C.BndEvt__R_BranchBank_PowerRoom_SBZPlayerTriggerVolume_1_K2Node_ActorBoundEvent_3_ActorBeginOverlapSignature__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
-// class ASBZInteractionActor*             Interactable                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class USBZInteractorComponent*          Interactor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           OverlappedActor                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AR_Penthouse_Vault_C::BndEvt__R_Penthouse_Vault_BP_PortableSSD_2_K2Node_ActorBoundEvent_1_SBZActorOnInteraction__DelegateSignature(class ASBZInteractionActor* Interactable, class USBZInteractorComponent* Interactor)
+void AR_BranchBank_PowerRoom_C::BndEvt__R_BranchBank_PowerRoom_SBZPlayerTriggerVolume_1_K2Node_ActorBoundEvent_3_ActorBeginOverlapSignature__DelegateSignature(class AActor* OverlappedActor, class AActor* OtherActor)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("R_Penthouse_Vault_C", "BndEvt__R_Penthouse_Vault_BP_PortableSSD_2_K2Node_ActorBoundEvent_1_SBZActorOnInteraction__DelegateSignature");
+		Func = Class->GetFunction("R_BranchBank_PowerRoom_C", "BndEvt__R_BranchBank_PowerRoom_SBZPlayerTriggerVolume_1_K2Node_ActorBoundEvent_3_ActorBeginOverlapSignature__DelegateSignature");
 
-	Params::R_Penthouse_Vault_C_BndEvt__R_Penthouse_Vault_BP_PortableSSD_2_K2Node_ActorBoundEvent_1_SBZActorOnInteraction__DelegateSignature Parms{};
+	Params::R_BranchBank_PowerRoom_C_BndEvt__R_BranchBank_PowerRoom_SBZPlayerTriggerVolume_1_K2Node_ActorBoundEvent_3_ActorBeginOverlapSignature__DelegateSignature Parms{};
 
-	Parms.Interactable = Interactable;
-	Parms.Interactor = Interactor;
+	Parms.OverlappedActor = OverlappedActor;
+	Parms.OtherActor = OtherActor;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function RandomizedRoom_0.R_Penthouse_Vault_C.Code_Entered
+// Function RandomizedRoom_0.R_BranchBank_PowerRoom_C.HeistStateChanged
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// EPD3HeistState                          OldHeistState                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EPD3HeistState                          CurrentHeistState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AR_BranchBank_PowerRoom_C::HeistStateChanged(EPD3HeistState OldHeistState, EPD3HeistState CurrentHeistState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("R_BranchBank_PowerRoom_C", "HeistStateChanged");
+
+	Params::R_BranchBank_PowerRoom_C_HeistStateChanged Parms{};
+
+	Parms.OldHeistState = OldHeistState;
+	Parms.CurrentHeistState = CurrentHeistState;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function RandomizedRoom_0.R_BranchBank_PowerRoom_C.BranchBank_Roof
 // (BlueprintCallable, BlueprintEvent)
 
-void AR_Penthouse_Vault_C::Code_Entered()
+void AR_BranchBank_PowerRoom_C::BranchBank_Roof()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("R_Penthouse_Vault_C", "Code_Entered");
+		Func = Class->GetFunction("R_BranchBank_PowerRoom_C", "BranchBank_Roof");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function RandomizedRoom_0.R_Penthouse_Vault_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function RandomizedRoom_0.R_BranchBank_PowerRoom_C.BranchBank_Stairs
+// (BlueprintCallable, BlueprintEvent)
 
-void AR_Penthouse_Vault_C::ReceiveBeginPlay()
+void AR_BranchBank_PowerRoom_C::BranchBank_Stairs()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("R_Penthouse_Vault_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("R_BranchBank_PowerRoom_C", "BranchBank_Stairs");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function RandomizedRoom_0.R_Penthouse_Vault_C.BndEvt__R_Penthouse_Vault_BP_Int_Door_01_SmallVault_01_0_K2Node_ActorBoundEvent_2_SBZGateStateChangedDelegate__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// ESBZGateState                           OldState                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// ESBZGateState                           State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function RandomizedRoom_0.R_BranchBank_PowerRoom_C.BranchBank_Kitchen
+// (BlueprintCallable, BlueprintEvent)
 
-void AR_Penthouse_Vault_C::BndEvt__R_Penthouse_Vault_BP_Int_Door_01_SmallVault_01_0_K2Node_ActorBoundEvent_2_SBZGateStateChangedDelegate__DelegateSignature(ESBZGateState OldState, ESBZGateState State)
+void AR_BranchBank_PowerRoom_C::BranchBank_Kitchen()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("R_Penthouse_Vault_C", "BndEvt__R_Penthouse_Vault_BP_Int_Door_01_SmallVault_01_0_K2Node_ActorBoundEvent_2_SBZGateStateChangedDelegate__DelegateSignature");
+		Func = Class->GetFunction("R_BranchBank_PowerRoom_C", "BranchBank_Kitchen");
 
-	Params::R_Penthouse_Vault_C_BndEvt__R_Penthouse_Vault_BP_Int_Door_01_SmallVault_01_0_K2Node_ActorBoundEvent_2_SBZGateStateChangedDelegate__DelegateSignature Parms{};
-
-	Parms.OldState = OldState;
-	Parms.State = State;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function RandomizedRoom_0.R_Penthouse_Vault_C.ExecuteUbergraph_R_Penthouse_Vault
+// Function RandomizedRoom_0.R_BranchBank_PowerRoom_C.OnRandomPlacementStarted
+// (Event, Public, BlueprintEvent)
+
+void AR_BranchBank_PowerRoom_C::OnRandomPlacementStarted()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("R_BranchBank_PowerRoom_C", "OnRandomPlacementStarted");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function RandomizedRoom_0.R_BranchBank_PowerRoom_C.BndEvt__R_BranchBank_PowerRoom_BP_GenericHackableComputer_2_K2Node_ActorBoundEvent_0_SBZHackableActorDelegate__DelegateSignature
+// (BlueprintAuthorityOnly, BlueprintEvent)
+
+void AR_BranchBank_PowerRoom_C::BndEvt__R_BranchBank_PowerRoom_BP_GenericHackableComputer_2_K2Node_ActorBoundEvent_0_SBZHackableActorDelegate__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("R_BranchBank_PowerRoom_C", "BndEvt__R_BranchBank_PowerRoom_BP_GenericHackableComputer_2_K2Node_ActorBoundEvent_0_SBZHackableActorDelegate__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function RandomizedRoom_0.R_BranchBank_PowerRoom_C.BndEvt__R_BranchBank_PowerRoom_BP_GenericHackableComputer_2_K2Node_ActorBoundEvent_4_SBZHackableActorDelegate__DelegateSignature
+// (BlueprintAuthorityOnly, BlueprintEvent)
+
+void AR_BranchBank_PowerRoom_C::BndEvt__R_BranchBank_PowerRoom_BP_GenericHackableComputer_2_K2Node_ActorBoundEvent_4_SBZHackableActorDelegate__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("R_BranchBank_PowerRoom_C", "BndEvt__R_BranchBank_PowerRoom_BP_GenericHackableComputer_2_K2Node_ActorBoundEvent_4_SBZHackableActorDelegate__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function RandomizedRoom_0.R_BranchBank_PowerRoom_C.RandomizedRoomTest_RemoteEvent1
+// (BlueprintCallable, BlueprintEvent)
+
+void AR_BranchBank_PowerRoom_C::RandomizedRoomTest_RemoteEvent1()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("R_BranchBank_PowerRoom_C", "RandomizedRoomTest_RemoteEvent1");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function RandomizedRoom_0.R_BranchBank_PowerRoom_C.BranchBank_PowerRoomEnableComputer
+// (BlueprintCallable, BlueprintEvent)
+
+void AR_BranchBank_PowerRoom_C::BranchBank_PowerRoomEnableComputer()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("R_BranchBank_PowerRoom_C", "BranchBank_PowerRoomEnableComputer");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function RandomizedRoom_0.R_BranchBank_PowerRoom_C.ExecuteUbergraph_R_BranchBank_PowerRoom
 // (Final, UbergraphFunction)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AR_Penthouse_Vault_C::ExecuteUbergraph_R_Penthouse_Vault(int32 EntryPoint)
+void AR_BranchBank_PowerRoom_C::ExecuteUbergraph_R_BranchBank_PowerRoom(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("R_Penthouse_Vault_C", "ExecuteUbergraph_R_Penthouse_Vault");
+		Func = Class->GetFunction("R_BranchBank_PowerRoom_C", "ExecuteUbergraph_R_BranchBank_PowerRoom");
 
-	Params::R_Penthouse_Vault_C_ExecuteUbergraph_R_Penthouse_Vault Parms{};
+	Params::R_BranchBank_PowerRoom_C_ExecuteUbergraph_R_BranchBank_PowerRoom Parms{};
 
 	Parms.EntryPoint = EntryPoint;
 

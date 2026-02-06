@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CH_BaseCommonSwat_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -26,8 +26,8 @@ public:
 	class UStaticMeshComponent*                   Helmet;                                            // 0x1D00(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_CH_SWAT_SMG_HEAVY(int32 EntryPoint);
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()

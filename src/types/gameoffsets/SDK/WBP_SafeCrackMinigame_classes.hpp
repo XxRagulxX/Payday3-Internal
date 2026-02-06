@@ -64,16 +64,16 @@ public:
 	float                                         CorrectHoldDuration;                               // 0x03C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetNewTimerSpeed(float LoopTime_0);
-	void IncreasingRounds(bool decrease);
-	void SetCorrectNumber();
-	void Finished_6CE8C22141CE58724C9E5F81C78317AF();
-	void OnInitialized();
-	void BP_OnXAxisChanged(float Value_0);
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void OnOwningMiniGameComponent(class USBZMiniGameComponent* MiniGameComponet);
-	void MiniGameStateChanged(EPD3MiniGameState NewState);
 	void ExecuteUbergraph_WBP_SafeCrackMinigame(int32 EntryPoint);
+	void MiniGameStateChanged(EPD3MiniGameState NewState);
+	void OnOwningMiniGameComponent(class USBZMiniGameComponent* MiniGameComponet);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void BP_OnXAxisChanged(float Value_0);
+	void OnInitialized();
+	void Finished_6CE8C22141CE58724C9E5F81C78317AF();
+	void SetCorrectNumber();
+	void IncreasingRounds(bool decrease);
+	void SetNewTimerSpeed(float LoopTime_0);
 
 public:
 	static class UClass* StaticClass()

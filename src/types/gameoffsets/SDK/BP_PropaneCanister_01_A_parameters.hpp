@@ -16,25 +16,6 @@
 namespace SDK::Params
 {
 
-// Function BP_PropaneCanister_01_A.BP_PropaneCanister_01_A_C.UserConstructionScript
-// 0x0001 (0x0001 - 0x0000)
-struct BP_PropaneCanister_01_A_C_UserConstructionScript final
-{
-public:
-	bool                                          CallFunc_SetStaticMesh_ReturnValue;                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_BP_PropaneCanister_01_A_C_UserConstructionScript;
-
-// Function BP_PropaneCanister_01_A.BP_PropaneCanister_01_A_C.BndEvt__BP_TestExplosiveFuelTank_NiagaraComponent_K2Node_ComponentBoundEvent_0_ActorComponentActivatedSignature__DelegateSignature
-// 0x0010 (0x0010 - 0x0000)
-struct BP_PropaneCanister_01_A_C_BndEvt__BP_TestExplosiveFuelTank_NiagaraComponent_K2Node_ComponentBoundEvent_0_ActorComponentActivatedSignature__DelegateSignature final
-{
-public:
-	class UActorComponent*                        Component;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bReset;                                            // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_BP_PropaneCanister_01_A_C_BndEvt__BP_TestExplosiveFuelTank_NiagaraComponent_K2Node_ComponentBoundEvent_0_ActorComponentActivatedSignature__DelegateSignature;
-
 // Function BP_PropaneCanister_01_A.BP_PropaneCanister_01_A_C.ExecuteUbergraph_BP_PropaneCanister_01_A
 // 0x0040 (0x0040 - 0x0000)
 struct BP_PropaneCanister_01_A_C_ExecuteUbergraph_BP_PropaneCanister_01_A final
@@ -49,6 +30,25 @@ public:
 	bool                                          K2Node_ComponentBoundEvent_bReset;                 // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_BP_PropaneCanister_01_A_C_ExecuteUbergraph_BP_PropaneCanister_01_A;
+
+// Function BP_PropaneCanister_01_A.BP_PropaneCanister_01_A_C.BndEvt__BP_TestExplosiveFuelTank_NiagaraComponent_K2Node_ComponentBoundEvent_0_ActorComponentActivatedSignature__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct BP_PropaneCanister_01_A_C_BndEvt__BP_TestExplosiveFuelTank_NiagaraComponent_K2Node_ComponentBoundEvent_0_ActorComponentActivatedSignature__DelegateSignature final
+{
+public:
+	class UActorComponent*                        Component;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bReset;                                            // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_BP_PropaneCanister_01_A_C_BndEvt__BP_TestExplosiveFuelTank_NiagaraComponent_K2Node_ComponentBoundEvent_0_ActorComponentActivatedSignature__DelegateSignature;
+
+// Function BP_PropaneCanister_01_A.BP_PropaneCanister_01_A_C.UserConstructionScript
+// 0x0001 (0x0001 - 0x0000)
+struct BP_PropaneCanister_01_A_C_UserConstructionScript final
+{
+public:
+	bool                                          CallFunc_SetStaticMesh_ReturnValue;                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_BP_PropaneCanister_01_A_C_UserConstructionScript;
 
 }
 

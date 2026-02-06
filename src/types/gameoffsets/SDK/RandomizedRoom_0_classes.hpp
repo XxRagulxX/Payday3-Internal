@@ -18,48 +18,49 @@
 namespace SDK
 {
 
-// BlueprintGeneratedClass RandomizedRoom_0.R_Penthouse_Vault_C
-// 0x0068 (0x03A8 - 0x0340)
-class AR_Penthouse_Vault_C final : public ASBZLevelScriptActor
+// BlueprintGeneratedClass RandomizedRoom_0.R_BranchBank_PowerRoom_C
+// 0x0028 (0x0368 - 0x0340)
+class AR_BranchBank_PowerRoom_C final : public ASBZLevelScriptActor
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class ASBZWaypoint*                           SBZWaypoint_1_ExecuteUbergraph_R_Penthouse_Vault_RefProperty; // 0x0348(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_InteractableJewelry_LowValue_C*     BP_InteractableJewelry_LowValue4_ExecuteUbergraph_R_Penthouse_Vault_RefProperty; // 0x0350(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_Safe_01_C*                          BP_Safe_01_2_ExecuteUbergraph_R_Penthouse_Vault_RefProperty; // 0x0358(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_InteractableJewelry_LowValue_C*     BP_InteractableJewelry_LowValue3_ExecuteUbergraph_R_Penthouse_Vault_RefProperty; // 0x0360(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_InteractableJewelry_LowValue_C*     BP_InteractableJewelry_LowValue6_ExecuteUbergraph_R_Penthouse_Vault_RefProperty; // 0x0368(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_InteractableJewelry_LowValue_C*     BP_InteractableJewelry_LowValue9_ExecuteUbergraph_R_Penthouse_Vault_RefProperty; // 0x0370(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_InteractableJewelry_LowValue_C*     BP_InteractableJewelry_LowValue10_ExecuteUbergraph_R_Penthouse_Vault_RefProperty; // 0x0378(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_InteractableJewelry_LowValue_C*     BP_InteractableJewelry_LowValue5_ExecuteUbergraph_R_Penthouse_Vault_RefProperty; // 0x0380(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_InteractableJewelry_LowValue_C*     BP_InteractableJewelry_LowValue2_5_ExecuteUbergraph_R_Penthouse_Vault_RefProperty; // 0x0388(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_VaultDoor_Medium_C*                 BP_Int_Door_01_SmallVault_01_0_ExecuteUbergraph_R_Penthouse_Vault_RefProperty; // 0x0390(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_InteractableJewelry_LowValue_C*     BP_InteractableJewelry_LowValue7_ExecuteUbergraph_R_Penthouse_Vault_RefProperty; // 0x0398(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_InteractableJewelry_LowValue_C*     BP_InteractableJewelry_LowValue_2_ExecuteUbergraph_R_Penthouse_Vault_RefProperty; // 0x03A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Var_OpenedDoor;                                    // 0x0348(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          Var_CanistersRequired;                             // 0x0349(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_34A[0x2];                                      // 0x034A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Int_InteractedWithAllCanisters;                    // 0x034C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          VarCanistersEnabled;                               // 0x0350(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_351[0x7];                                      // 0x0351(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_GenericHackableComputer_C*          BP_GenericHackableComputer_2_ExecuteUbergraph_R_BranchBank_PowerRoom_RefProperty; // 0x0358(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ASBZPlayerTriggerVolume*                SBZPlayerTriggerVolume_1_ExecuteUbergraph_R_BranchBank_PowerRoom_RefProperty; // 0x0360(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BndEvt__R_Penthouse_Vault_BP_Safe_01_2_K2Node_ActorBoundEvent_0_SBZOnMinigameDoneDelegate__DelegateSignature();
-	void BndEvt__R_Penthouse_Vault_BP_PortableSSD_2_K2Node_ActorBoundEvent_1_SBZActorOnInteraction__DelegateSignature(class ASBZInteractionActor* Interactable, class USBZInteractorComponent* Interactor);
-	void Code_Entered();
-	void ReceiveBeginPlay();
-	void BndEvt__R_Penthouse_Vault_BP_Int_Door_01_SmallVault_01_0_K2Node_ActorBoundEvent_2_SBZGateStateChangedDelegate__DelegateSignature(ESBZGateState OldState, ESBZGateState State);
-	void ExecuteUbergraph_R_Penthouse_Vault(int32 EntryPoint);
+	void BndEvt__R_BranchBank_PowerRoom_SBZPlayerTriggerVolume_1_K2Node_ActorBoundEvent_3_ActorBeginOverlapSignature__DelegateSignature(class AActor* OverlappedActor, class AActor* OtherActor);
+	void HeistStateChanged(EPD3HeistState OldHeistState, EPD3HeistState CurrentHeistState);
+	void BranchBank_Roof();
+	void BranchBank_Stairs();
+	void BranchBank_Kitchen();
+	void OnRandomPlacementStarted();
+	void BndEvt__R_BranchBank_PowerRoom_BP_GenericHackableComputer_2_K2Node_ActorBoundEvent_0_SBZHackableActorDelegate__DelegateSignature();
+	void BndEvt__R_BranchBank_PowerRoom_BP_GenericHackableComputer_2_K2Node_ActorBoundEvent_4_SBZHackableActorDelegate__DelegateSignature();
+	void RandomizedRoomTest_RemoteEvent1();
+	void BranchBank_PowerRoomEnableComputer();
+	void ExecuteUbergraph_R_BranchBank_PowerRoom(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
 	{
-		BP_STATIC_CLASS_IMPL("R_Penthouse_Vault_C")
+		BP_STATIC_CLASS_IMPL("R_BranchBank_PowerRoom_C")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"R_Penthouse_Vault_C")
+		STATIC_NAME_IMPL(L"R_BranchBank_PowerRoom_C")
 	}
-	static class AR_Penthouse_Vault_C* GetDefaultObj()
+	static class AR_BranchBank_PowerRoom_C* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<AR_Penthouse_Vault_C>();
+		return GetDefaultObjImpl<AR_BranchBank_PowerRoom_C>();
 	}
 };
-DUMPER7_ASSERTS_AR_Penthouse_Vault_C;
+DUMPER7_ASSERTS_AR_BranchBank_PowerRoom_C;
 
 }
 

@@ -68,6 +68,7 @@ public:
 		return GetDefaultObjImpl<ABP_VaultDoor_Medium_C>();
 	}
 };
+DUMPER7_ASSERTS_ABP_VaultDoor_Medium_C;
 
 }
 

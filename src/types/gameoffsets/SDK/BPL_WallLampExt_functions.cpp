@@ -17,6 +17,26 @@
 namespace SDK
 {
 
+// Function BPL_WallLampExt.BPL_WallLampExt_C.ExecuteUbergraph_BPL_WallLampExt
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABPL_WallLampExt_C::ExecuteUbergraph_BPL_WallLampExt(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPL_WallLampExt_C", "ExecuteUbergraph_BPL_WallLampExt");
+
+	Params::BPL_WallLampExt_C_ExecuteUbergraph_BPL_WallLampExt Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BPL_WallLampExt.BPL_WallLampExt_C.BndEvt__BPL_WallLampExt_SBZCosmeticDestruction_K2Node_ComponentBoundEvent_0_SBZCosmeticDestructionComponenteSignature__DelegateSignature
 // (HasOutParams, BlueprintEvent)
 // Parameters:
@@ -34,26 +54,6 @@ void ABPL_WallLampExt_C::BndEvt__BPL_WallLampExt_SBZCosmeticDestruction_K2Node_C
 
 	Parms.Type = Type;
 	Parms.HitContext = std::move(HitContext);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPL_WallLampExt.BPL_WallLampExt_C.ExecuteUbergraph_BPL_WallLampExt
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABPL_WallLampExt_C::ExecuteUbergraph_BPL_WallLampExt(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPL_WallLampExt_C", "ExecuteUbergraph_BPL_WallLampExt");
-
-	Params::BPL_WallLampExt_C_ExecuteUbergraph_BPL_WallLampExt Parms{};
-
-	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

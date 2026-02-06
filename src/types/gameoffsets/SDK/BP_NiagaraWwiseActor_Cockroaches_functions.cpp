@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function BP_NiagaraWwiseActor_Cockroaches.BP_NiagaraWwiseActor_Cockroaches_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_NiagaraWwiseActor_Cockroaches_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_NiagaraWwiseActor_Cockroaches_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_NiagaraWwiseActor_Cockroaches.BP_NiagaraWwiseActor_Cockroaches_C.ExecuteUbergraph_BP_NiagaraWwiseActor_Cockroaches
 // (Final, UbergraphFunction)
 // Parameters:
@@ -48,6 +34,20 @@ void ABP_NiagaraWwiseActor_Cockroaches_C::ExecuteUbergraph_BP_NiagaraWwiseActor_
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_NiagaraWwiseActor_Cockroaches.BP_NiagaraWwiseActor_Cockroaches_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_NiagaraWwiseActor_Cockroaches_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_NiagaraWwiseActor_Cockroaches_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

@@ -38,8 +38,8 @@ public:
 	float                                         SinVal;                                            // 0x06B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_ABP_SentryGun(int32 EntryPoint);
 	void AnimGraph(struct FPoseLink* AnimGraph_0);
+	void ExecuteUbergraph_ABP_SentryGun(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

@@ -29,8 +29,8 @@ public:
 	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x0380(0x00D0)()
 
 public:
-	void ExecuteUbergraph_ABP_HandCuffsAnimation(int32 EntryPoint);
 	void AnimGraph(struct FPoseLink* AnimGraph_0);
+	void ExecuteUbergraph_ABP_HandCuffsAnimation(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

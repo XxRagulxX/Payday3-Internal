@@ -10,31 +10,45 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "Starbreeze_classes.hpp"
 
 
 namespace SDK
 {
 
-// BlueprintGeneratedClass RandomizedRoom_2.R_Penthouse_SecurityRoom_C
-// 0x0000 (0x0340 - 0x0340)
-class AR_Penthouse_SecurityRoom_C final : public ASBZLevelScriptActor
+// BlueprintGeneratedClass RandomizedRoom_2.R_BranchBank_StorageRoom_C
+// 0x0018 (0x0358 - 0x0340)
+class AR_BranchBank_StorageRoom_C final : public ASBZLevelScriptActor
 {
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          Var_OpenedDoor;                                    // 0x0348(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          Var_CanistersRequired;                             // 0x0349(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_34A[0x2];                                      // 0x034A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Int_InteractedWithAllCanisters;                    // 0x034C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          VarCanistersEnabled;                               // 0x0350(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+
+public:
+	void RandomizedRoomTest_RemoteEvent1();
+	void OnRandomSublevelPlaced();
+	void ExecuteUbergraph_R_BranchBank_StorageRoom(int32 EntryPoint);
+
 public:
 	static class UClass* StaticClass()
 	{
-		BP_STATIC_CLASS_IMPL("R_Penthouse_SecurityRoom_C")
+		BP_STATIC_CLASS_IMPL("R_BranchBank_StorageRoom_C")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"R_Penthouse_SecurityRoom_C")
+		STATIC_NAME_IMPL(L"R_BranchBank_StorageRoom_C")
 	}
-	static class AR_Penthouse_SecurityRoom_C* GetDefaultObj()
+	static class AR_BranchBank_StorageRoom_C* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<AR_Penthouse_SecurityRoom_C>();
+		return GetDefaultObjImpl<AR_BranchBank_StorageRoom_C>();
 	}
 };
-DUMPER7_ASSERTS_AR_Penthouse_SecurityRoom_C;
+DUMPER7_ASSERTS_AR_BranchBank_StorageRoom_C;
 
 }
 

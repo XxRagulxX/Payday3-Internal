@@ -10,37 +10,21 @@
 
 #include "Basic.hpp"
 
-#include "Starbreeze_structs.hpp"
-
 
 namespace SDK::Params
 {
 
-// Function RandomizedRoom_1.R_Penthouse_Panic_C.BndEvt__R_Penthouse_Panic_BP_Int_Door_01_SmallVault_2_K2Node_ActorBoundEvent_0_SBZGateStateChangedDelegate__DelegateSignature
-// 0x0002 (0x0002 - 0x0000)
-struct R_Penthouse_Panic_C_BndEvt__R_Penthouse_Panic_BP_Int_Door_01_SmallVault_2_K2Node_ActorBoundEvent_0_SBZGateStateChangedDelegate__DelegateSignature final
-{
-public:
-	ESBZGateState                                 OldState;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESBZGateState                                 State;                                             // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_R_Penthouse_Panic_C_BndEvt__R_Penthouse_Panic_BP_Int_Door_01_SmallVault_2_K2Node_ActorBoundEvent_0_SBZGateStateChangedDelegate__DelegateSignature;
-
-// Function RandomizedRoom_1.R_Penthouse_Panic_C.ExecuteUbergraph_R_Penthouse_Panic
-// 0x000C (0x000C - 0x0000)
-struct R_Penthouse_Panic_C_ExecuteUbergraph_R_Penthouse_Panic final
+// Function RandomizedRoom_1.R_BranchBank_SecurityRoom_C.ExecuteUbergraph_R_BranchBank_SecurityRoom
+// 0x0028 (0x0028 - 0x0000)
+struct R_BranchBank_SecurityRoom_C_ExecuteUbergraph_R_BranchBank_SecurityRoom final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetState_ReturnValue;                     // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_SetState_ReturnValue_1;                   // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_SetState_ReturnValue_2;                   // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_SetState_ReturnValue_3;                   // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESBZGateState                                 K2Node_ActorBoundEvent_OldState;                   // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESBZGateState                                 K2Node_ActorBoundEvent_State;                      // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AActor*>                         CallFunc_DestroyActors_KeptActors;                 // 0x0008(0x0010)(ReferenceParm)
+	TArray<class AActor*>                         CallFunc_DestroyActors_DestroyedActors;            // 0x0018(0x0010)(ReferenceParm)
 };
-DUMPER7_ASSERTS_R_Penthouse_Panic_C_ExecuteUbergraph_R_Penthouse_Panic;
+DUMPER7_ASSERTS_R_BranchBank_SecurityRoom_C_ExecuteUbergraph_R_BranchBank_SecurityRoom;
 
 }
 
