@@ -1,0 +1,9 @@
+#pragma once
+
+#define CURRENT_VERSION "V1.0.0"
+
+#define UNLOAD_KEY VK_END
+#define UNLOAD_KEY_ALT VK_DELETE
+#define CONSOLE_KEY VK_HOME
+
+#define TARGET_VERSION "902193"

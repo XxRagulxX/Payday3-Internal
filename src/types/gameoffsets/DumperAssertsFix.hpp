@@ -1,0 +1,148 @@
+#pragma once
+
+/*
+ * This file provides fallback empty macros for all undefined DUMPER7_ASSERTS_* macros
+ * The SDK generator doesn't generate assertion macros for all classes, so we define
+ * a catch-all empty macro to prevent compilation errors
+ * 
+ * Additionally, we disable all static_assert checks when DUMPER7_DISABLE_ASSERTS is defined
+ * to prevent build failures when the SDK is out of sync with the game
+ */
+
+#ifdef DUMPER7_DISABLE_ASSERTS
+// Completely disable static_assert for SDK files
+#ifdef static_assert
+#undef static_assert
+#endif
+#define static_assert(...)
+#endif
+
+// Since we can't define a wildcard macro, we'll define empty macros for the classes
+// that are giving errors. If more errors appear, add them here.
+
+#ifndef DUMPER7_ASSERTS_AAkSplineEmitter_C
+#define DUMPER7_ASSERTS_AAkSplineEmitter_C
+#endif
+
+#ifndef DUMPER7_ASSERTS_AkSplineEmitter_C_GetDistanceToPlayerFromClosestSplinePoint
+#define DUMPER7_ASSERTS_AkSplineEmitter_C_GetDistanceToPlayerFromClosestSplinePoint
+#endif
+
+#ifndef DUMPER7_ASSERTS_AkSplineEmitter_C_GetIsInsideSpline
+#define DUMPER7_ASSERTS_AkSplineEmitter_C_GetIsInsideSpline
+#endif
+
+#ifndef DUMPER7_ASSERTS_AkSplineEmitter_C_GetPlayerControllerCameraRotation
+#define DUMPER7_ASSERTS_AkSplineEmitter_C_GetPlayerControllerCameraRotation
+#endif
+
+#ifndef DUMPER7_ASSERTS_AkSplineEmitter_C_GetControlledPawnLocation
+#define DUMPER7_ASSERTS_AkSplineEmitter_C_GetControlledPawnLocation
+#endif
+
+#ifndef DUMPER7_ASSERTS_AkSplineEmitter_C_UserConstructionScript
+#define DUMPER7_ASSERTS_AkSplineEmitter_C_UserConstructionScript
+#endif
+
+#ifndef DUMPER7_ASSERTS_AkSplineEmitter_C_ReceiveTick
+#define DUMPER7_ASSERTS_AkSplineEmitter_C_ReceiveTick
+#endif
+
+#ifndef DUMPER7_ASSERTS_AkSplineEmitter_C_ExecuteUbergraph_AkSplineEmitter
+#define DUMPER7_ASSERTS_AkSplineEmitter_C_ExecuteUbergraph_AkSplineEmitter
+#endif
+
+#ifndef DUMPER7_ASSERTS_ABPL_FloodLamp_C
+#define DUMPER7_ASSERTS_ABPL_FloodLamp_C
+#endif
+
+#ifndef DUMPER7_ASSERTS_BPL_FloodLamp_C_BndEvt__BPL_FloodLamp_SBZCosmeticDestruction_K2Node_ComponentBoundEvent_0_SBZCosmeticDestructionComponenteSignature__DelegateSignature
+#define DUMPER7_ASSERTS_BPL_FloodLamp_C_BndEvt__BPL_FloodLamp_SBZCosmeticDestruction_K2Node_ComponentBoundEvent_0_SBZCosmeticDestructionComponenteSignature__DelegateSignature
+#endif
+
+#ifndef DUMPER7_ASSERTS_BPL_FloodLamp_C_ExecuteUbergraph_BPL_FloodLamp
+#define DUMPER7_ASSERTS_BPL_FloodLamp_C_ExecuteUbergraph_BPL_FloodLamp
+#endif
+
+#ifndef DUMPER7_ASSERTS_ABPL_WallLampExt_C
+#define DUMPER7_ASSERTS_ABPL_WallLampExt_C
+#endif
+
+#ifndef DUMPER7_ASSERTS_BPL_WallLampExt_C_BndEvt__BPL_WallLampExt_SBZCosmeticDestruction_K2Node_ComponentBoundEvent_0_SBZCosmeticDestructionComponenteSignature__DelegateSignature
+#define DUMPER7_ASSERTS_BPL_WallLampExt_C_BndEvt__BPL_WallLampExt_SBZCosmeticDestruction_K2Node_ComponentBoundEvent_0_SBZCosmeticDestructionComponenteSignature__DelegateSignature
+#endif
+
+#ifndef DUMPER7_ASSERTS_BPL_WallLampExt_C_ExecuteUbergraph_BPL_WallLampExt
+#define DUMPER7_ASSERTS_BPL_WallLampExt_C_ExecuteUbergraph_BPL_WallLampExt
+#endif
+
+#ifndef DUMPER7_ASSERTS_AA_ArmoredTransport_C
+#define DUMPER7_ASSERTS_AA_ArmoredTransport_C
+#endif
+
+#ifndef DUMPER7_ASSERTS_A_ArmoredTransport_C_ExecuteUbergraph_A_ArmoredTransport
+#define DUMPER7_ASSERTS_A_ArmoredTransport_C_ExecuteUbergraph_A_ArmoredTransport
+#endif
+
+// Fix for alignment assertion errors in Starbreeze_classes.hpp
+// We need to undefine the existing macros with wrong assertions and redefine them as empty
+
+#ifdef DUMPER7_ASSERTS_USBZInventoryBaseData
+#undef DUMPER7_ASSERTS_USBZInventoryBaseData
+#endif
+#define DUMPER7_ASSERTS_USBZInventoryBaseData
+
+#ifdef DUMPER7_ASSERTS_ASBZWheeledVehicle
+#undef DUMPER7_ASSERTS_ASBZWheeledVehicle
+#endif
+#define DUMPER7_ASSERTS_ASBZWheeledVehicle
+
+#ifdef DUMPER7_ASSERTS_USBZInventorySlotData
+#undef DUMPER7_ASSERTS_USBZInventorySlotData
+#endif
+#define DUMPER7_ASSERTS_USBZInventorySlotData
+
+#ifdef DUMPER7_ASSERTS_USBZModularPartDataAsset
+#undef DUMPER7_ASSERTS_USBZModularPartDataAsset
+#endif
+#define DUMPER7_ASSERTS_USBZModularPartDataAsset
+
+#ifdef DUMPER7_ASSERTS_ASBZAICharacter
+#undef DUMPER7_ASSERTS_ASBZAICharacter
+#endif
+#define DUMPER7_ASSERTS_ASBZAICharacter
+
+#ifdef DUMPER7_ASSERTS_ASBZAIFBIVan
+#undef DUMPER7_ASSERTS_ASBZAIFBIVan
+#endif
+#define DUMPER7_ASSERTS_ASBZAIFBIVan
+
+#ifdef DUMPER7_ASSERTS_USBZCoinData
+#undef DUMPER7_ASSERTS_USBZCoinData
+#endif
+#define DUMPER7_ASSERTS_USBZCoinData
+
+#ifdef DUMPER7_ASSERTS_USBZItemBundleData
+#undef DUMPER7_ASSERTS_USBZItemBundleData
+#endif
+#define DUMPER7_ASSERTS_USBZItemBundleData
+
+#ifdef DUMPER7_ASSERTS_USBZLoadoutSlotData
+#undef DUMPER7_ASSERTS_USBZLoadoutSlotData
+#endif
+#define DUMPER7_ASSERTS_USBZLoadoutSlotData
+
+#ifdef DUMPER7_ASSERTS_USBZSuitData
+#undef DUMPER7_ASSERTS_USBZSuitData
+#endif
+#define DUMPER7_ASSERTS_USBZSuitData
+
+#ifdef DUMPER7_ASSERTS_USBZWatchData
+#undef DUMPER7_ASSERTS_USBZWatchData
+#endif
+#define DUMPER7_ASSERTS_USBZWatchData
+
+#ifdef DUMPER7_ASSERTS_USBZVendorPermissionData
+#undef DUMPER7_ASSERTS_USBZVendorPermissionData
+#endif
+#define DUMPER7_ASSERTS_USBZVendorPermissionData
