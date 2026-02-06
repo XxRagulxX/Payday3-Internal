@@ -15,6 +15,7 @@
 #include "core/logging/Logging.hpp"
 #include "core/hooking/Dx12Hook.hpp"
 #include "game/frontend/Menu.hpp"
+#include "game/features/noclip/NoClip.hpp"
 #include "types/gameoffsets/SDK.hpp"
 
 namespace Globals {
@@ -246,19 +247,16 @@ void MainLoop()
 		if (!pMovementComponent)
 			continue;
 
-		if(pLocalPlayerPawn->SBZPlayerState)
-			g_durationPing = std::chrono::milliseconds(static_cast<int>(pLocalPlayerPawn->SBZPlayerState->GetPingInMilliseconds() * 2.f));
+	if(pLocalPlayerPawn->SBZPlayerState)
+		g_durationPing = std::chrono::milliseconds(static_cast<int>(pLocalPlayerPawn->SBZPlayerState->GetPingInMilliseconds() * 2.f));
 
-		if(Menu::g_bClientMove){
-			if (pLocalPlayerPawn->GetActorEnableCollision())
-				pLocalPlayerPawn->SetActorEnableCollision(false);
-
-			pMovementComponent->MovementMode = SDK::EMovementMode::MOVE_Flying;
-		}
-		else if(!pLocalPlayerPawn->GetActorEnableCollision()){
-			pLocalPlayerPawn->SetActorEnableCollision(true);
-			pMovementComponent->MovementMode = SDK::EMovementMode::MOVE_Walking;
-		}
+	// NoClip feature - uses modular implementation
+	if(Menu::g_bClientMove){
+		NoClip::Apply(pLocalPlayerPawn, pMovementComponent);
+	}
+	else if(!pLocalPlayerPawn->GetActorEnableCollision()){
+		NoClip::Restore(pLocalPlayerPawn, pMovementComponent);
+	}
 
 		
 		//bool LineOfSightTo(const class AActor* Other, const struct FVector& ViewPoint, bool bAlternateChecks) const;

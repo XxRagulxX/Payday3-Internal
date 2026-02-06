@@ -111,10 +111,15 @@ namespace Menu
         ImGui::Text("FPS: %.1f (%.3f ms)", ImGui::GetIO().Framerate, 1000.0f / ImGui::GetIO().Framerate);
         ImGui::Separator();
         
-        // Gameplay features
-        if (ImGui::CollapsingHeader("Gameplay", ImGuiTreeNodeFlags_DefaultOpen))
+        // Features section
+        if (ImGui::CollapsingHeader("Features", ImGuiTreeNodeFlags_DefaultOpen))
         {
-            ImGui::Checkbox("No Client Move", &g_bClientMove);
+            if (ImGui::Checkbox("No Clip", &g_bClientMove))
+            {
+                // Toggle noclip mode
+            }
+            if (ImGui::IsItemHovered())
+                ImGui::SetTooltip("Fly through walls and objects\nWASD to move, look direction to fly up/down");
         }
         
         ImGui::Separator();
