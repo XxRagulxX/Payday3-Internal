@@ -1,7 +1,0 @@
-# Build directories
-.vs/
-out/
-build/
-build-linux/
-bin/
-lib/
