@@ -20,36 +20,36 @@ namespace Utils
 		if (eStatus == MH_OK)
 		{
 			sMessage = _Format("[{}:{}] [+] Hook: {} - OK\n", location.file_name(), location.line(), sHookName);
-			std::cout << colors::green << sMessage << colors::reset;
+			std::cout << sMessage;
 		}
 		else
 		{
 			sMessage = _Format("[{}:{}] [-] Hook: {} - Failed with status: {}\n", location.file_name(), location.line(), sHookName, static_cast<int>(eStatus));
-			std::cerr << colors::red << sMessage << colors::reset;
+			std::cerr << sMessage;
 		}
 	}
 
 	void LogHook(const std::string& sHookName, const std::string& sReason, const std::string& sMessage, std::source_location location)
 	{
 		std::string sFullMessage = _Format("[{}:{}] [-] Hook: {} - {} - {}\n", location.file_name(), location.line(), sHookName, sReason, sMessage);
-		std::cerr << colors::red << sFullMessage << colors::reset;
+		std::cerr << sFullMessage;
 	}
 
 	void LogError(const int iErrorCode, std::source_location location)
 	{
 		std::string sMessage = _Format("[{}:{}] [-] Error Code: {:#x}\n", location.file_name(), location.line(), iErrorCode);
-		std::cerr << colors::red << sMessage << colors::reset;
+		std::cerr << sMessage;
 	}
 
 	void LogError(const std::string& sErrorMessage, std::source_location location)
 	{
 		std::string sMessage = _Format("[{}:{}] [-] Error: {}\n", location.file_name(), location.line(), sErrorMessage);
-		std::cerr << colors::red << sMessage << colors::reset;
+		std::cerr << sMessage;
 	}
 
 	void LogDebug(const std::string& sDebugMessage, std::source_location location)
 	{
 		std::string sMessage = _Format("[{}:{}] [*] Debug: {}\n", location.file_name(), location.line(), sDebugMessage);
-		std::cout << colors::cyan << sMessage << colors::reset;
+		std::cout << sMessage;
 	}
 }

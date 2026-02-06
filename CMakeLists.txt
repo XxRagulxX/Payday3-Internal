@@ -10,6 +10,13 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 # Disable incremental linking (critical for injected DLLs)
 set(CMAKE_MSVC_INCREMENTAL_LINKING OFF CACHE BOOL "" FORCE)
 
+# Also disable for all build types
+foreach(config DEBUG RELEASE RELWITHDEBINFO MINSIZEREL)
+    set(CMAKE_EXE_LINKER_FLAGS_${config} "${CMAKE_EXE_LINKER_FLAGS_${config}} /INCREMENTAL:NO" CACHE STRING "" FORCE)
+    set(CMAKE_SHARED_LINKER_FLAGS_${config} "${CMAKE_SHARED_LINKER_FLAGS_${config}} /INCREMENTAL:NO" CACHE STRING "" FORCE)
+    set(CMAKE_MODULE_LINKER_FLAGS_${config} "${CMAKE_MODULE_LINKER_FLAGS_${config}} /INCREMENTAL:NO" CACHE STRING "" FORCE)
+endforeach()
+
 # Platform / ABI checks
 if (NOT CMAKE_SYSTEM_NAME STREQUAL "Windows")
     message(FATAL_ERROR "Target system must be Windows (use -DCMAKE_TOOLCHAIN_FILE=cmake/linux.cmake on Linux).")
@@ -167,6 +174,11 @@ target_link_options(Payday3Internal PRIVATE
     /INCREMENTAL:NO
     /NOLOGO
     /DLL
+)
+
+# Force disable incremental linking for all configurations (critical for injected DLLs)
+set_target_properties(Payday3Internal PROPERTIES
+    LINK_FLAGS "/INCREMENTAL:NO"
 )
 
 # Windows system libraries (DirectX 12)

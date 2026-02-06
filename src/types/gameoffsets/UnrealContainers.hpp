@@ -907,9 +907,9 @@ namespace UC
 
 		public:
 			inline TContainerIterator& operator++() { ++BitIterator; return *this; }
-// // // // 			inline TContainerIterator& operator--() { --BitIterator; return *this; }
-// // // // 
-// // // // 			inline       auto& operator*()       { return IteratedContainer[GetIndex()]; }
+// // // // // // // 			inline TContainerIterator& operator--() { --BitIterator; return *this; }
+// // // // // // // 
+// // // // // // // 			inline       auto& operator*()       { return IteratedContainer[GetIndex()]; }
 			inline const auto& operator*() const { return IteratedContainer[GetIndex()]; }
 
 			inline       auto* operator->()       { return &IteratedContainer[GetIndex()]; }

@@ -66,10 +66,10 @@ cd "$BUILD_DIR"
 # Configure with CMake
 echo -e "${YELLOW}Running CMake configuration...${NC}"
 cmake .. \
-    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_BUILD_TYPE=Debug \
     -DCMAKE_TOOLCHAIN_FILE=../cmake/linux.cmake \
     -G "Ninja" 2>/dev/null || cmake .. \
-    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_BUILD_TYPE=Debug \
     -DCMAKE_TOOLCHAIN_FILE=../cmake/linux.cmake \
     -G "Unix Makefiles"
 

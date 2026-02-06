@@ -12,7 +12,6 @@
 #include <system_error>
 #include <chrono>
 #include <Windows.h>
-#include "Logcolor.hpp"
 
 // Helper functions for logging
 namespace Utils
