@@ -2,6 +2,12 @@ cmake_minimum_required(VERSION 3.20)
 
 project(Payday3Internal LANGUAGES CXX C)
 
+# ============================================================
+# Windows DLL Build Configuration
+# Targets: MSVC and Clang (clang-cl)
+# Compatible with Proton-GE for Linux gaming
+# ============================================================
+
 # Global configuration
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -12,7 +18,7 @@ set(CMAKE_MSVC_INCREMENTAL_LINKING OFF CACHE BOOL "" FORCE)
 
 # Platform / ABI checks
 if (NOT WIN32)
-    message(FATAL_ERROR "Payday builds Windows DLLs only.")
+    message(FATAL_ERROR "This project builds Windows DLLs only. Use Proton-GE on Linux for compatibility.")
 endif()
 
 if (NOT MSVC)
